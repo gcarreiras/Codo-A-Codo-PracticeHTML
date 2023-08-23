@@ -79,8 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
         pokemonTypes.textContent = "Types: " + pokemonInfo.type.join(", ");
         pokemonDebilidad.textContent = "Debilidad: " + pokemonInfo.debilidad;
         modal.style.display = "block";
-        pokemonImage.src = pokemonInfo.img; // Set the image source
-        pokemonImage.alt = image.alt; // Set the alt attribute of the image
+        pokemonImage.src = pokemonInfo.img; 
+        pokemonImage.alt = image.alt; 
       });
     });
   

@@ -1,3 +1,21 @@
+body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#ec3c3c 1.6500000000000001px, #e5e5f7 1.6500000000000001px);
+    background-size: 33px 33px;
+    opacity: 0.5;
+    pointer-events: none; 
+}
+    
+
 /* Header H1 */
 
 .headerClass {
@@ -5,15 +23,16 @@
   }
   
   .titulo {
-    font-size: 36px;
+    font-size: 50px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #333;
-    border-bottom: 2px solid #333;
+    color: #c22828;
+    border-bottom: 2px solid #432d2d;
     padding-bottom: 10px;
     margin-top: 20px;
   }
 /*  Hasta aca Header   */
+
 
 /* modal sin sin boostrap =) */
 .modal {
@@ -29,13 +48,20 @@
   }
   
   .modal-content {
-    background-color: #fff;
+    background-color: #f6e7e7;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 60%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+}
+  .modal .pokemon-image{
+    width: 300px;
+    height: auto;
   }
-  
   .close-btn {
     color: #aaa;
     float: right;
@@ -51,28 +77,61 @@
   }
 
 /* Fin del modal */
-  
+/* footer   */
+.footer{
+background-color: #888;
+position: relative; 
+z-index: 1;
+height: 80px; 
+padding: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.parrafo {
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    
+}
 
+/* fin del footer */
 .pokemon-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Aumenta el espacio entre las imágenes */
-  }
-  
-  .pokemon-image {
-    flex: 1; /* Distribuirá el espacio disponible igualmente entre las imágenes */
-    max-width: 100%;
-  }
+    gap: 20px;
+    justify-content: center; 
+    position: relative;
+}
 
+.pokemon-image {
+    width: 500px;
+    height: auto;
+    position: relative; 
+    z-index: 1; 
+    opacity: 1.0;
+    
+}
+
+.pokemon-image:hover {
+    transform: scale(1.1); 
+}
+  
+  
   /* Media Queries para diseño responsive */
-  @media (max-width: 1199px) {
+
+  @media (max-width: 1500px) {
     .pokemon-image {
-      width: calc(50% - 20px); /* 2 imágenes por fila */
-    }
+        width: 450px;
+        height: auto;
+      }
   }
   
-  @media (max-width: 767px) {
+
+
+  @media (max-width: 500px) {
     .pokemon-image {
-      width: calc(100% - 20px); /* 1 imagen por fila */
-    }
+        width: 250px;
+        height: auto;
+      }
   }
