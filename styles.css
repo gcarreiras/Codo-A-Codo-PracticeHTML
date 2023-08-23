@@ -31,3 +31,28 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+
+  .pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .pokemon-image {
+    width: calc(33.33% - 20px); /* 3 imágenes por fila */
+    max-width: 100%;
+  }
+  
+  /* Media Queries para diseño responsive */
+  @media (max-width: 1199px) {
+    .pokemon-image {
+      width: calc(50% - 20px); /* 2 imágenes por fila */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .pokemon-image {
+      width: calc(100% - 20px); /* 1 imagen por fila */
+    }
+  }

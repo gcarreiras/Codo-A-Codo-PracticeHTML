@@ -57,6 +57,7 @@ const api = {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    console.log('modal?')
     const modal = document.getElementById("modal");
     const closeModalBtn = document.getElementById("closeModalBtn");
     const pokemonImages = document.querySelectorAll(".pokemon-image");
